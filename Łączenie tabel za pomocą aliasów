@@ -1,0 +1,10 @@
+SELECT t."INDEKS", t."PLU", t."Indeks SAP", t."NAZWA", t."Producenci", p."WARTOSC", p."ID_WARTOSC"
+FROM CENTRALA_USER.TOWARY t, CENTRALA_USER.PRODUCENCI p
+WHERE t."Producenci" = p."WARTOSC"(+)
+order by 1;
+
+ŁĄCZENIE TABEL:
+
+t. to odwołanie do tabeli CENTRALA_USER.TOWARY - aby skrócić nazwę i żeby było później bardzo czytelne
+p. to samo.
+WHERE t."Producenci" = p."WARTOSC"(+) - złączenie po polu producenci
